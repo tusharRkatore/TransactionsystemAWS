@@ -27,6 +27,10 @@ app.use(cors(
 app.use(express.json());
 mongoose.connect('mongodb+srv://tusharkatore2019:6fUbIaXgBiCy0uQN@cluster1.kq70g.mongodb.net/transaction?retryWrites=true&w=majority&appName=Cluster1');
 
+app.get("/",(req,res) =>{
+  res.json("hello");
+});
+
 app.use("/", router);
 app.use("/", allTransactionRoute);
 app.use("/", statRoute);
