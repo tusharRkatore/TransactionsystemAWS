@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(cors(
         {
-          origin:{" "},
+          origin:{"https://transaction-system-two.vercel.app"},
           method:{"POST","GET"},
           credentials: true
         }
