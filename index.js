@@ -17,7 +17,15 @@ const corsOptions = {
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
+app.use(cors(
+        {
+          origin:{" "},
+          method:{"POST","GET"},
+          credentials: true
+        }
+  ));
 app.use(express.json());
+mongoose.connect('mongodb+srv://tusharkatore2019:6fUbIaXgBiCy0uQN@cluster1.kq70g.mongodb.net/transaction?retryWrites=true&w=majority&appName=Cluster1');
 
 app.use("/", router);
 app.use("/", allTransactionRoute);
